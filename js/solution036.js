@@ -1,7 +1,17 @@
-// Volume of a Cuboid: Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid. 
+// To square(root) or not to square(root): Write a method, that will get an integer array as parameter and will process every number from this array.
 
-class Kata {
-    static getVolumeOfCuboid(length, width, height) {
-      return length*width*height
-    }
+function squareOrSquareRoot(array) {
+  
+    let newArray = []
+     
+    array.forEach(element => {
+       if(Math.sqrt(element) % 1 === 0) {
+         newArray.push(Math.sqrt(element))
+       }else{
+          newArray.push(element*element)
+       }         
+    });
+    
+    return newArray
   }
+
